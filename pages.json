@@ -1,0 +1,97 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "信息页",			// 局部导航栏背景色，会覆盖全局
+				"h5": {										// H5设置独有样式
+					"pullToRefresh": {
+						"color": "blueviolet"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/index/index"
+			// "style": {					
+			// 	"navigationBarTitleText": "uni-app"		// 局部导航栏背景色，会覆盖全局
+			// }
+		},
+		{
+			"path": "pages/contact/contact"
+		},
+		{
+			"path": "pages/detail/detail"
+		},
+		{
+			"path":"pages/uni-style/uni-style"
+		},
+		{
+			"path":"pages/home/home"
+		},
+		{
+			"path":"pages/list/list",
+			"style": {
+				"enablePullDownRefresh": true			,//局部配置下拉刷新
+				"onReachBottomDistance": 200			// 距离底部200的时候触发事件
+			}
+		},
+		{
+			"path":"pages/navigator/navigator"
+		}
+		
+		
+	],
+	// 全局配置
+	"globalStyle": {
+		"navigationBarTextStyle": "white",			    // 导航栏文字颜色
+		"navigationBarTitleText": "我的应用",			// 导航栏文字
+		"navigationBarBackgroundColor": "#007AFF",		// 导航栏背景色，会被局部覆盖
+		"backgroundColor": "#F8F8F8"					// 下拉背景色
+		// "enablePullDownRefresh": true					// 是否开启下拉刷新（不推荐全局配置）
+	},
+	//tabbar
+	"tabBar":{
+		"color":"brown",								// 未选中的颜色
+		"selectedColor":"darkgreen",					// 选中后的颜色
+		"backgroundColor":"#C0C0C0",					// 背景颜色
+		"borderStyle":"black",							// tabbar 上边框的颜色，仅支持 black/white
+		"list": [										// tab 的列表，详见 list 属性说明，最少2个、最多5个 tab
+			{
+				"text": "首页",							// tabbar文字
+				"pagePath": "pages/index/index",		// page路径
+				"iconPath": "static/tabs/home.png",		// 图标路径
+				"selectedIconPath": "static/tabs/home-active.png"	// 选中后图标路径
+			},
+			{
+				"text": "信息",
+				"pagePath": "pages/message/message",
+				"iconPath": "static/tabs/message.png",
+				"selectedIconPath": "static/tabs/message-active.png"
+			},
+			{
+				"text": "学习页",
+				"pagePath": "pages/navigator/navigator",
+				"iconPath": "static/tabs/message.png",
+				"selectedIconPath": "static/tabs/message-active.png"
+			},
+			{
+				"text": "联系我们",
+				"pagePath": "pages/contact/contact",
+				"iconPath": "static/tabs/contact.png",
+				"selectedIconPath": "static/tabs/contact-active.png"
+			}
+			
+		]
+	},
+	"condition": {										// condition启动模式配置
+		"current": 0,									// 当前激活的模式，list节点的索引值
+		"list":[										// 启动模式列表
+			{
+				"name":"详情页",							// 启动模式名称
+				"path":"pages/detail/detail",			// 启动页面路径
+				"query":"id=80"							// 启动参数
+			}
+		]
+	}
+}
