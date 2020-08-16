@@ -3,7 +3,7 @@
 	<view>
 		<view>Hello World,我是message页</view>
 		<button type="primary" @click="chooseImg">上传图片</button>
-		<image v-for="item in imgArr" :src="item" @click="previewImg(item)"></image>
+		<image v-for="item in imgArr" :src="item" @click="previewImg(item)" :key="item"></image>
 		<!-- #ifdef H5  -->
 		<view>我想在H5中显示</view>
 		<!-- #endif -->

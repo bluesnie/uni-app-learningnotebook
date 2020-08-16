@@ -5,7 +5,7 @@
 		<button type="primary" @click="getStorage">获取缓存数据</button>
 		<button type="primary" @click="removeStorage">移除缓存数据</button>
 		<view>这是list页</view>
-		<view class="box-item" v-for="item in list">
+		<view class="box-item" v-for="item in list" :key="item">
 			<view>{{ item }}</view>
 		</view>
 		<!-- <button @click="pullDown">下拉刷新</button> -->

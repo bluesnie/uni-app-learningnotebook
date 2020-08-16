@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import App from './App'
 
+import { myRequest } from './utils/api.js'
+
+
+Vue.prototype.$myRequest = myRequest			// 挂载在全局
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'

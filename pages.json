@@ -38,6 +38,10 @@
 		},
 		{
 			"path":"pages/navigator/navigator"
+		},
+		//sqlite数据库
+		{
+			"path":"pages/database/database"
 		}
 		
 		
@@ -59,7 +63,7 @@
 		"list": [										// tab 的列表，详见 list 属性说明，最少2个、最多5个 tab
 			{
 				"text": "首页",							// tabbar文字
-				"pagePath": "pages/index/index",		// page路径
+				"pagePath": "pages/home/home",		// page路径
 				"iconPath": "static/tabs/home.png",		// 图标路径
 				"selectedIconPath": "static/tabs/home-active.png"	// 选中后图标路径
 			},
@@ -71,7 +75,7 @@
 			},
 			{
 				"text": "学习页",
-				"pagePath": "pages/navigator/navigator",
+				"pagePath": "pages/database/database",
 				"iconPath": "static/tabs/message.png",
 				"selectedIconPath": "static/tabs/message-active.png"
 			},
@@ -83,8 +87,8 @@
 			}
 			
 		]
-	},
-	"condition": {										// condition启动模式配置
+	}
+	/*"condition": {										// condition启动模式配置
 		"current": 0,									// 当前激活的模式，list节点的索引值
 		"list":[										// 启动模式列表
 			{
@@ -93,5 +97,5 @@
 				"query":"id=80"							// 启动参数
 			}
 		]
-	}
+	}*/
 }
